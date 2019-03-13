@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'homeSwiper',
+  name: 'HomeSwiper',
   data () {
     return {
       swiperOption: {
