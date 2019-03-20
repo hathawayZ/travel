@@ -6,7 +6,7 @@
     <ul>
       <li
         class="item border-bottom"
-        v-for="item of recommendList"
+        v-for="item of list"
         :key="item.id"
       >
         <div class="item-img-wrapper">
@@ -28,31 +28,12 @@
 <script>
 export default {
   name: 'HomeWeekend',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl:
-              'http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg',
-          title: '上海迪士尼',
-          desc: '迪士尼乐园还原你的公主梦'
-        },
-        {
-          id: '0002',
-          imgUrl:
-              'http://img1.qunarzz.com/sight/source/1511/1d/fe098e8cfec117.jpg_r_640x214_a9be292a.jpg',
-          title: '上海迪士尼',
-          desc: '迪士尼乐园还原你的公主梦'
-        },
-        {
-          id: '0003',
-          imgUrl:
-              'http://img1.qunarzz.com/sight/source/1511/1d/fe098e8cfec117.jpg_r_640x214_a9be292a.jpg',
-          title: '上海迪士尼',
-          desc: '迪士尼乐园还原你的公主梦'
-        }
-      ]
+
     }
   }
 }
@@ -63,7 +44,6 @@ export default {
   .title
     line-height :.8rem
     background :#eee
-    margin-top:.2rem
     text-indent :.2rem
   .item-img-wrapper
     overflow :hidden
