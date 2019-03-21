@@ -9,7 +9,7 @@
               :src="item.imgUrl"
             />
           </div>
-          <p class="icon-desc">{{item.title}}</p>
+          <p class="icon-desc">{{item.desc}}</p>
         </div>
       </swiper-slide>
     </swiper>

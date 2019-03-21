@@ -15,7 +15,7 @@
             {{ item.title }}
           </p>
           <p class="item-desc">
-            {{ item.address }}
+            {{ item.desc }}
           </p>
           <button class="item-button">查看详情</button>
         </div>

@@ -13,95 +13,18 @@
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list">
-          <div class="button-wrapper"  v-for="item of cityList" :key="item.id">
+          <div class="button-wrapper"  v-for="item of hots" :key="item.id">
             <div class="button">{{item.name}}</div>
           </div>
         </div>
-
       </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
+      <div class="area" v-for="(item,index) of city" :key="index">
+        <div class="title border-topbottom">{{index}}</div>
           <div class="itemList">
-            <div class="item border-bottom">
-              阿尔及利亚
-            </div>
-            <div class="item border-bottom">
-              阿尔及利亚
-            </div>
-            <div class="item border-bottom">
-              阿尔及利亚
+            <div class="item border-bottom" v-for="InnerItem of item" :key="InnerItem.id">
+              {{InnerItem.name}}
             </div>
           </div>
-      </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="itemList">
-          <div class="item border-bottom">
-            阿尔及利亚
-          </div>
-          <div class="item border-bottom">
-            阿尔及利亚
-          </div>
-          <div class="item border-bottom">
-            阿尔及利亚
-          </div>
-        </div>
-      </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="itemList">
-          <div class="item border-bottom">
-            阿尔及利亚
-          </div>
-          <div class="item border-bottom">
-            阿尔及利亚
-          </div>
-          <div class="item border-bottom">
-            阿尔及利亚
-          </div>
-        </div>
-      </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="itemList">
-          <div class="item border-bottom">
-            阿尔及利亚
-          </div>
-          <div class="item border-bottom">
-            阿尔及利亚
-          </div>
-          <div class="item border-bottom">
-            阿尔及利亚
-          </div>
-        </div>
-      </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="itemList">
-          <div class="item border-bottom">
-            阿尔及利亚
-          </div>
-          <div class="item border-bottom">
-            阿尔及利亚
-          </div>
-          <div class="item border-bottom">
-            阿尔及利亚
-          </div>
-        </div>
-      </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="itemList">
-          <div class="item border-bottom">
-            阿尔及利亚
-          </div>
-          <div class="item border-bottom">
-            阿尔及利亚
-          </div>
-          <div class="item border-bottom">
-            阿尔及利亚
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -112,34 +35,12 @@
 import BScroll from 'better-scroll'
 export default {
   name: 'CityList',
+  props: {
+    city: Object,
+    hots: Array
+  },
   data () {
     return {
-      cityList: [
-        {
-          id: '001',
-          name: '北京'
-        },
-        {
-          id: '002',
-          name: '北京'
-        },
-        {
-          id: '003',
-          name: '北京'
-        },
-        {
-          id: '004',
-          name: '北京'
-        },
-        {
-          id: '005',
-          name: '北京'
-        },
-        {
-          id: '006',
-          name: '北京'
-        }
-      ]
     }
   },
   mounted () {
