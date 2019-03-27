@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="banner">
+    <div class="banner" @click="handleBannerClick">
      <img class="banner-img"
        src="//img1.qunarzz.com/sight/p0/1603/17/170481fb9caf500790.water.jpg_600x330_c46225ab.jpg">
       <div class="banner-info">
@@ -8,7 +8,7 @@
         <div class="banner-number"><span class="iconfont banner-icon">&#xe692;</span> 28</div>
       </div>
     </div>
-    <common-gallery></common-gallery>
+    <common-gallery :imgs="imgs" v-show="showGallery" @close="handleGalleryClose"></common-gallery>
   </div>
 </template>
 
@@ -16,7 +16,22 @@
 import CommonGallery from 'common/gallery/gallery'
 export default {
   name: 'detailBanner',
-  components: {CommonGallery}
+  components: {CommonGallery},
+  data () {
+    return {
+      imgs: ['http://img1.qunarzz.com/sight/p0/1603/17/170481fb9caf500790.water.jpg_r_800x800_15271965.jpg',
+        'http://img1.qunarzz.com/sight/p0/201405/15/4b16c55b620218c786d0ed33e92b8b80.jpg_r_800x800_dbb543d6.jpg'],
+      showGallery: false
+    }
+  },
+  methods: {
+    handleBannerClick () {
+      this.showGallery = true
+    },
+    handleGalleryClose () {
+      this.showGallery = false
+    }
+  }
 }
 </script>
 
