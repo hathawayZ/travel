@@ -45,11 +45,6 @@ export default {
 <style lang="stylus" scoped>
 .container>>>.swiper-container
  overflow :inherit
-/*.gallery-wrapper>>>.swiper-slide*/
- /*box-sizing :border-box*/
- /*width :100%*/
- /*padding-bottom :100%*/
- /*height :0*/
 .container
   z-index :99
   display: flex
@@ -64,15 +59,9 @@ export default {
   .gallery-wrapper
    width :100%
    height :0
-   padding-bottom :66.4%
+   padding-bottom :100%
    .img
     width :100%
-    /*position :absolute*/
-    /*top:0*/
-    /*bottom :0*/
-    /*left:0*/
-    /*right :0*/
-    /*margin :auto*/
    .swiper-pagination
     color :#ffffff
     bottom :-1rem
