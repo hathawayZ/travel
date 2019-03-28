@@ -16,7 +16,8 @@
 import CommonGallery from 'common/gallery/gallery'
 export default {
   name: 'detailBanner',
-  components: {CommonGallery},
+  components: {
+    CommonGallery},
   data () {
     return {
       imgs: ['http://img1.qunarzz.com/sight/p0/1603/17/170481fb9caf500790.water.jpg_r_800x800_15271965.jpg',
